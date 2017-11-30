@@ -1,2 +1,5 @@
+# --- Sample dataset
+
 # --- !Ups
-INSERT INTO CUSTOMER (id, name, age) VALUES(1, 'JOHN' 10);
+
+insert into customer (id, name, age) values (1000, 'John', 21);

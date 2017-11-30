@@ -71,3 +71,15 @@ INSERT INTO CUSTOMER (id, name, age) VALUES(1, "JOHN" 10) [42001-193]
 2017-11-24 16:43:14 jdbc[85]: exception
 org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CUSTOMER (ID, NAME, AGE) VALUES(1, 'JOHN' 10[*]) "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
 INSERT INTO CUSTOMER (id, name, age) VALUES(1, 'JOHN' 10) [42001-193]
+2017-11-30 13:33:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CUSTOMER (ID, NAME, AGE) VALUES(1, 'JOHN' 10[*]) "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO CUSTOMER (id, name, age) VALUES(1, 'JOHN' 10) [42001-193]
+2017-11-30 13:34:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CUSTOMER VALUES(1, 'JOHN' 10[*])"; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO CUSTOMER VALUES(1, 'JOHN' 10) [42001-193]
+2017-11-30 13:36:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CUSTOMER (ID, NAME, AGE) VALUES(1, 'JOHN' 10[*]) "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO CUSTOMER (id, name, age) VALUES(1, 'JOHN' 10) [42001-193]
+2017-11-30 13:37:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CUSTOMER (ID, NAME, AGE) VALUES(1, 'JOHN' 10[*]) "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO customer (id, name, age) VALUES(1, 'JOHN' 10) [42001-193]
