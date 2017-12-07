@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/media/sf_student/lab8/conf/routes
-// @DATE:Thu Dec 07 13:16:00 GMT 2017
+// @DATE:Thu Dec 07 13:40:56 GMT 2017
 
 package controllers;
 

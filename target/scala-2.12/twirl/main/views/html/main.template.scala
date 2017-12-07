@@ -48,10 +48,9 @@ Seq[Any](format.raw/*1.32*/("""
     """),format.raw/*16.5*/("""</style>
 
 <!-- Bootstrap Core CSS -->
-
+<script src=""""),_display_(/*19.15*/routes/*19.21*/.Assets.versioned("javascripts/main.js")),format.raw/*19.61*/(""""></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" />
-
-<!-- Custom CSS --> <link href=""""),_display_(/*22.34*/routes/*22.40*/.Assets.versioned("stylesheets/main.css")),format.raw/*22.81*/("""" rel="stylesheet" />
+<!-- Custom CSS --> <link href=""""),_display_(/*21.34*/routes/*21.40*/.Assets.versioned("stylesheets/main.css")),format.raw/*21.81*/("""" rel="stylesheet" />
 
 </head>
 
@@ -87,9 +86,9 @@ Seq[Any](format.raw/*1.32*/("""
 
 <div class="col-md-12">
 
-"""),_display_(/*58.2*/content),format.raw/*58.9*/("""
+"""),_display_(/*57.2*/content),format.raw/*57.9*/("""
 
-"""),format.raw/*60.1*/("""</div>
+"""),format.raw/*59.1*/("""</div>
 
 </row>
 
@@ -127,11 +126,11 @@ Copyright <strong>Online Shop</strong>
 
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 07 12:48:05 GMT 2017
+                  DATE: Thu Dec 07 13:52:09 GMT 2017
                   SOURCE: /media/sf_student/lab8/app/views/main.scala.html
-                  HASH: 5d1b192ec17612e6df8d0d5fa54e35aa171308d7
-                  MATRIX: 952->1|1077->31|1107->35|1231->132|1257->137|1320->172|1349->173|1391->187|1446->215|1475->216|1508->222|1713->400|1728->406|1790->447|2261->892|2288->899|2319->903
-                  LINES: 28->1|33->1|35->3|43->11|43->11|45->13|45->13|46->14|47->15|47->15|48->16|54->22|54->22|54->22|90->58|90->58|92->60
+                  HASH: ddcd502f6911b12d10a19941bf84891e99b8ebf4
+                  MATRIX: 952->1|1077->31|1107->35|1231->132|1257->137|1320->172|1349->173|1391->187|1446->215|1475->216|1508->222|1590->277|1605->283|1666->323|1839->469|1854->475|1916->516|2387->961|2414->968|2445->972
+                  LINES: 28->1|33->1|35->3|43->11|43->11|45->13|45->13|46->14|47->15|47->15|48->16|51->19|51->19|51->19|53->21|53->21|53->21|89->57|89->57|91->59
                   -- GENERATED --
               */
           

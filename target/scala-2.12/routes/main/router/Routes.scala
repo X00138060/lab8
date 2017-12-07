@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/media/sf_student/lab8/conf/routes
-// @DATE:Thu Dec 07 13:16:00 GMT 2017
+// @DATE:Thu Dec 07 13:40:56 GMT 2017
 
 package router
 
@@ -17,7 +17,7 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   HomeController_0: controllers.HomeController,
-  // @LINE:11
+  // @LINE:13
   Assets_1: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -26,7 +26,7 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     HomeController_0: controllers.HomeController,
-    // @LINE:11
+    // @LINE:13
     Assets_1: controllers.Assets
   ) = this(errorHandler, HomeController_0, Assets_1, "/")
 
@@ -43,6 +43,7 @@ class Routes(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addProduct""", """controllers.HomeController.addProduct"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addProductSubmit""", """controllers.HomeController.addProductSubmit"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """delProduct/""" + "$" + """id<[^/]+>""", """controllers.HomeController.deleteProduct(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -105,11 +106,29 @@ class Routes(
     )
   )
 
-  // @LINE:11
-  private[this] lazy val controllers_Assets_versioned3_route = Route("GET",
+  // @LINE:10
+  private[this] lazy val controllers_HomeController_deleteProduct3_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("delProduct/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_HomeController_deleteProduct3_invoker = createInvoker(
+    HomeController_0.deleteProduct(fakeValue[Long]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "deleteProduct",
+      Seq(classOf[Long]),
+      "GET",
+      this.prefix + """delProduct/""" + "$" + """id<[^/]+>""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:13
+  private[this] lazy val controllers_Assets_versioned4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned3_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned4_invoker = createInvoker(
     Assets_1.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -144,10 +163,16 @@ class Routes(
         controllers_HomeController_addProductSubmit2_invoker.call(HomeController_0.addProductSubmit)
       }
   
-    // @LINE:11
-    case controllers_Assets_versioned3_route(params@_) =>
+    // @LINE:10
+    case controllers_HomeController_deleteProduct3_route(params@_) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_HomeController_deleteProduct3_invoker.call(HomeController_0.deleteProduct(id))
+      }
+  
+    // @LINE:13
+    case controllers_Assets_versioned4_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned3_invoker.call(Assets_1.versioned(path, file))
+        controllers_Assets_versioned4_invoker.call(Assets_1.versioned(path, file))
       }
   }
 }

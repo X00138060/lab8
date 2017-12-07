@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/media/sf_student/lab8/conf/routes
-// @DATE:Thu Dec 07 13:16:00 GMT 2017
+// @DATE:Thu Dec 07 13:40:56 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -40,6 +40,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:10
+    def deleteProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.deleteProduct",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "delProduct/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
     // @LINE:6
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
@@ -52,7 +62,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:11
+  // @LINE:13
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -60,7 +70,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:11
+    // @LINE:13
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
