@@ -127,8 +127,8 @@ Copyright <strong>Online Shop</strong>
 
               /*
                   -- GENERATED --
-                  DATE: Thu Nov 30 13:28:32 GMT 2017
-                  SOURCE: /media/sf_student/play-java-seed/app/views/main.scala.html
+                  DATE: Thu Dec 07 12:48:05 GMT 2017
+                  SOURCE: /media/sf_student/lab8/app/views/main.scala.html
                   HASH: 5d1b192ec17612e6df8d0d5fa54e35aa171308d7
                   MATRIX: 952->1|1077->31|1107->35|1231->132|1257->137|1320->172|1349->173|1391->187|1446->215|1475->216|1508->222|1713->400|1728->406|1790->447|2261->892|2288->899|2319->903
                   LINES: 28->1|33->1|35->3|43->11|43->11|45->13|45->13|46->14|47->15|47->15|48->16|54->22|54->22|54->22|90->58|90->58|92->60

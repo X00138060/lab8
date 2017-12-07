@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/media/sf_student/play-java-seed/conf/routes
-// @DATE:Thu Nov 30 13:28:31 GMT 2017
+// @SOURCE:/media/sf_student/lab8/conf/routes
+// @DATE:Thu Dec 07 13:16:00 GMT 2017
 
 
 package router {

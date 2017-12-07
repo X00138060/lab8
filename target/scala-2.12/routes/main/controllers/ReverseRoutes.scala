@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/media/sf_student/play-java-seed/conf/routes
-// @DATE:Thu Nov 30 13:28:31 GMT 2017
+// @SOURCE:/media/sf_student/lab8/conf/routes
+// @DATE:Thu Dec 07 13:16:00 GMT 2017
 
 import play.api.mvc.Call
 
@@ -19,6 +19,18 @@ package controllers {
     }
 
   
+    // @LINE:7
+    def addProduct(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "addProduct")
+    }
+  
+    // @LINE:8
+    def addProductSubmit(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "addProductSubmit")
+    }
+  
     // @LINE:6
     def index(): Call = {
       
@@ -27,14 +39,14 @@ package controllers {
   
   }
 
-  // @LINE:9
+  // @LINE:11
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:9
+    // @LINE:11
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))

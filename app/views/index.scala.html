@@ -3,6 +3,12 @@
 @main("Products Page") {
   
   <p class="lead">Product Catalogue</p>
+
+  @if(flash.containsKey("success")) {
+    <div class = "alert alert-success">
+      @flash.get("success")
+    </div>
+  }
   
   <table class="table table-bordered table-hover table-condensed">
     <thead>
@@ -28,5 +34,11 @@
     }
     </tbody>
   </table>
+
+  <p>
+    <a href="@routes.HomeController.addProduct()">
+      <button class="btn btn-primary">Add a Product</button>
+    </a>
+  </p>
   
   }

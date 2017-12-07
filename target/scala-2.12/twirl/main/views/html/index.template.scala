@@ -35,8 +35,14 @@ Seq[Any](format.raw/*1.34*/("""
 """),_display_(/*3.2*/main("Products Page")/*3.23*/ {_display_(Seq[Any](format.raw/*3.25*/("""
   
   """),format.raw/*5.3*/("""<p class="lead">Product Catalogue</p>
+
+  """),_display_(/*7.4*/if(flash.containsKey("success"))/*7.36*/ {_display_(Seq[Any](format.raw/*7.38*/("""
+    """),format.raw/*8.5*/("""<div class = "alert alert-success">
+      """),_display_(/*9.8*/flash/*9.13*/.get("success")),format.raw/*9.28*/("""
+    """),format.raw/*10.5*/("""</div>
+  """)))}),format.raw/*11.4*/("""
   
-  <table class="table table-bordered table-hover table-condensed">
+  """),format.raw/*13.3*/("""<table class="table table-bordered table-hover table-condensed">
     <thead>
     <!-- The header row-->
       <tr>
@@ -49,17 +55,23 @@ Seq[Any](format.raw/*1.34*/("""
     </thead>
     <tbody> 
     <!-- Product row(s) -->
-    """),_display_(/*20.6*/for(p<-products) yield /*20.22*/ {_display_(Seq[Any](format.raw/*20.24*/("""
-      """),format.raw/*21.7*/("""<tr>
-        <td class = "id">"""),_display_(/*22.27*/p/*22.28*/.getId),format.raw/*22.34*/("""</td>
-        <td>"""),_display_(/*23.14*/p/*23.15*/.getName),format.raw/*23.23*/("""</td>
-        <td>"""),_display_(/*24.14*/p/*24.15*/.getDescription),format.raw/*24.30*/("""</td>
-        <td>"""),_display_(/*25.14*/p/*25.15*/.getStock),format.raw/*25.24*/("""</td>
-        <td>&euro; """),_display_(/*26.21*/("%,.2f".format(p.getPrice))),format.raw/*26.49*/("""</td>
+    """),_display_(/*26.6*/for(p<-products) yield /*26.22*/ {_display_(Seq[Any](format.raw/*26.24*/("""
+      """),format.raw/*27.7*/("""<tr>
+        <td class = "id">"""),_display_(/*28.27*/p/*28.28*/.getId),format.raw/*28.34*/("""</td>
+        <td>"""),_display_(/*29.14*/p/*29.15*/.getName),format.raw/*29.23*/("""</td>
+        <td>"""),_display_(/*30.14*/p/*30.15*/.getDescription),format.raw/*30.30*/("""</td>
+        <td>"""),_display_(/*31.14*/p/*31.15*/.getStock),format.raw/*31.24*/("""</td>
+        <td>&euro; """),_display_(/*32.21*/("%,.2f".format(p.getPrice))),format.raw/*32.49*/("""</td>
       </tr>
-    """)))}),format.raw/*28.6*/("""
-    """),format.raw/*29.5*/("""</tbody>
+    """)))}),format.raw/*34.6*/("""
+    """),format.raw/*35.5*/("""</tbody>
   </table>
+
+  <p>
+    <a href=""""),_display_(/*39.15*/routes/*39.21*/.HomeController.addProduct()),format.raw/*39.49*/("""">
+      <button class="btn btn-primary">Add a Product</button>
+    </a>
+  </p>
   
   """)))}))
       }
@@ -77,11 +89,11 @@ Seq[Any](format.raw/*1.34*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Nov 30 13:28:32 GMT 2017
-                  SOURCE: /media/sf_student/play-java-seed/app/views/index.scala.html
-                  HASH: 27ed334168e7458dc32c4f4692dbeefdd8944aec
-                  MATRIX: 962->1|1089->33|1119->38|1148->59|1187->61|1221->69|1608->430|1640->446|1680->448|1715->456|1774->488|1784->489|1811->495|1858->515|1868->516|1897->524|1944->544|1954->545|1990->560|2037->580|2047->581|2077->590|2131->617|2180->645|2235->670|2268->676
-                  LINES: 28->1|33->1|35->3|35->3|35->3|37->5|52->20|52->20|52->20|53->21|54->22|54->22|54->22|55->23|55->23|55->23|56->24|56->24|56->24|57->25|57->25|57->25|58->26|58->26|60->28|61->29
+                  DATE: Thu Dec 07 13:16:00 GMT 2017
+                  SOURCE: /media/sf_student/lab8/app/views/index.scala.html
+                  HASH: 9cade7640ce8415caca317c5d232569795d59a51
+                  MATRIX: 962->1|1089->33|1119->38|1148->59|1187->61|1221->69|1290->113|1330->145|1369->147|1401->153|1470->197|1483->202|1518->217|1551->223|1592->234|1627->242|1969->558|2001->574|2041->576|2076->584|2135->616|2145->617|2172->623|2219->643|2229->644|2258->652|2305->672|2315->673|2351->688|2398->708|2408->709|2438->718|2492->745|2541->773|2596->798|2629->804|2701->849|2716->855|2765->883
+                  LINES: 28->1|33->1|35->3|35->3|35->3|37->5|39->7|39->7|39->7|40->8|41->9|41->9|41->9|42->10|43->11|45->13|58->26|58->26|58->26|59->27|60->28|60->28|60->28|61->29|61->29|61->29|62->30|62->30|62->30|63->31|63->31|63->31|64->32|64->32|66->34|67->35|71->39|71->39|71->39
                   -- GENERATED --
               */
           
